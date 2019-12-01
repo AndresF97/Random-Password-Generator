@@ -1,0 +1,5 @@
+var lenght = alert("Must include a lenght of 8 and 128 characters")
+var special=alert("Must include special characters")
+var numeric= alert("Must include numbers")
+var lower=alert("Must include a lower case letter")
+var upper=alert("Must include a Uppercase letter")
