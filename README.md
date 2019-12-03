@@ -1,7 +1,10 @@
 # Random-Password-Generator
 
 ## Site Picture
-![My Website]()
+![Password Generator]()
+
+## Summary 
+This a website that has information about me, how to contact me and projects I've worked on before.
 
 
 ## Technologies Used
@@ -12,8 +15,7 @@
 - Git - version control system to track changes to source code
 - GitHub - hosts repository that can be deployed to GitHub Pages
 
-## Summary 
-This a website that has information about me, how to contact me and projects I've worked on before.
+
 
 ## Code Snippet
 ```html
