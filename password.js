@@ -22,7 +22,7 @@ function generator(){
       }
    }
    // //alerts to to make sure the user wants these strings and numbers 
-      var length =confirm("Must include a lenght of 8 and 128 characters")
+      var length =confirm("Your password will be at least be "+answer+" characters long.")
       var special=confirm("Must include special characters")
       var numeric= confirm("Must include numbers")
       var lower=confirm("Must include a lower case letter")
