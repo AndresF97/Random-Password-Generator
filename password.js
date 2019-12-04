@@ -52,5 +52,13 @@ function generator(){
 }
    inbox.textContent=res
 }
+//made afunction to copy texts
+function copyfun(){
+   var get= document.getElementById("pass")
+   document.execCommand("copy")
+   alert("copied the text"+ get.value)
+
+}
 //event listener that makes the newpassword
 document.getElementById("button_1").addEventListener("click",generator)
+document.getElementById("button_2").addEventListener("click",copyfun)
