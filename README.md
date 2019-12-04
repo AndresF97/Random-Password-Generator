@@ -1,10 +1,11 @@
 # Random-Password-Generator
 
 ## Site Picture
-![Password Generator]()
+![Password Generator](https://media.licdn.com/dms/image/C4D22AQG1c8Pvw7G7sw/feedshare-shrink_800/0?e=1578528000&v=beta&t=-HOiWBNN67GCtaDmcXlrqb1gY7NTT43u5jXxWq__rfE)
 
 ## Summary 
-This a website that has information about me, how to contact me and projects I've worked on before.
+In this website you can generate random passwords with the characters the user has selected.
+
 
 
 ## Technologies Used
@@ -19,13 +20,33 @@ This a website that has information about me, how to contact me and projects I'v
 
 ## Code Snippet
 ```html
+<html>
+<body>
+    <script>
+     //gets the password characters by using a while loop
+      while(counter < answer){
+      
+      if(special===true){
+         res+=symbol[Math.floor(Math.random() * symbol.length)]
+   }
+      if(numeric===true){
+         res+=nums[Math.floor(Math.random() * nums.length)]
+   }
+      if(lower===true){
+       res+=little[Math.floor(Math.random() * little.length)]
 
-
-
+   }
+      if(upper===true){
+       res+=big[Math.floor(Math.random() * big.length)]
+   }
+      counter+=1
+}
+    </script>
 </body>
 </html>
 ```
-- 
+## Why this code is important
+- I choose this code to since its the most important part of the programme since it runs a loop until you get the password you wanted with the random characters you also choose. It took a while to set this up but with time and pattience it finally worked.
 ## Author Links
 [LinkedIn](linkedin.com/in/andres-felipe-jimenez-ferreira-b67a35192)
 [GitHub](https://github.com/AndresF97)
