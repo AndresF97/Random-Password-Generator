@@ -39,14 +39,12 @@ In this website you can generate random passwords with the characters the user h
       if(upper===true){
        res+=big[Math.floor(Math.random() * big.length)]
    }
-      counter+=1
-}
     </script>
 </body>
 </html>
 ```
 ## Why this code is important
-- I choose this code to since its the most important part of the programme since it runs a loop until you get the password you wanted with the random characters you also choose. It took a while to set this up but with time and pattience it finally worked.
+- I choose this code because its the most important part of the program since it runs a loop until you get the password you have selected with the random characters you choose. It took a while to set this up but with time and pattience it finally worked.
 ## Author Links
 [LinkedIn](linkedin.com/in/andres-felipe-jimenez-ferreira-b67a35192)
 [GitHub](https://github.com/AndresF97)

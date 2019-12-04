@@ -54,11 +54,8 @@ function generator(){
 }
 //made afunction to copy texts
 function copyfun(){
-   var get= document.getElementById("pass")
-   get.select()
-   document.execCommand("Copy")
-   alert("copied the text"+ get)
-   console.log(get)
+   
+   alert("sorry im out of service for today")
 
 }
 //event listener that makes the newpassword
