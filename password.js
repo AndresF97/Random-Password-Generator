@@ -38,18 +38,19 @@ function generator(){
       if(special===true){
          res+=symbol[Math.floor(Math.random() * symbol.length)]
    }
-      if(numeric===true){
+      else if(numeric===true){
          res+=nums[Math.floor(Math.random() * nums.length)]
    }
       if(lower===true){
        res+=little[Math.floor(Math.random() * little.length)]
 
    }
-      if(upper===true){
+      else if(upper===true){
        res+=big[Math.floor(Math.random() * big.length)]
    }
       counter+=1
 }
+
    inbox.textContent=res
 }
 //made afunction to copy texts

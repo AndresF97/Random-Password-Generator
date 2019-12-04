@@ -26,17 +26,17 @@ In this website you can generate random passwords with the characters the user h
      //gets the password characters by using a while loop
       while(counter < answer){
       
-      if(special===true){
+     if(special===true){
          res+=symbol[Math.floor(Math.random() * symbol.length)]
    }
-      if(numeric===true){
+      else if(numeric===true){
          res+=nums[Math.floor(Math.random() * nums.length)]
    }
       if(lower===true){
        res+=little[Math.floor(Math.random() * little.length)]
 
    }
-      if(upper===true){
+      else if(upper===true){
        res+=big[Math.floor(Math.random() * big.length)]
    }
     </script>
