@@ -1,7 +1,7 @@
 # Random-Password-Generator
 
 ## Site Picture
-![Password Generator](https://media.licdn.com/dms/image/C4D22AQG1c8Pvw7G7sw/feedshare-shrink_800/0?e=1578528000&v=beta&t=-HOiWBNN67GCtaDmcXlrqb1gY7NTT43u5jXxWq__rfE)
+![Password Generator](./assets/example.gif)
 
 ## Summary 
 In this website you can generate random passwords with the characters the user has selected.
