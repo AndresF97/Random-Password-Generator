@@ -4,7 +4,8 @@ var little=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n"
 var big=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 var symbol=["!","@","$","%","^","&","*","(",")","[","]","{","}",";","<",">","/"]
 var nums=[0,1,2,3,4,5,6,7,8,9]
-
+const generatoPwdBtn = document.getElementById("button_1") as HTMLElement
+const copyClipBoardBtn = document.getElementById("button_2") as HTMLElement
 
 
 //if statements to carry code
@@ -62,5 +63,5 @@ function copyfun(){
 
 }
 //event listener that makes the newpassword
-document.getElementById("button_1").addEventListener("click",generator)
-document.getElementById("button_2").addEventListener("click",copyfun)
+generatoPwdBtn.addEventListener("click",generator)
+copyClipBoardBtn.addEventListener("click",copyfun)
