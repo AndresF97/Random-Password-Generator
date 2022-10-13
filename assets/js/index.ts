@@ -12,13 +12,13 @@ const copyClipBoardBtn = document.getElementById("button_2") as HTMLElement
 function generator(){
 
    //confirm the lenght of the password
-      var answer=prompt("How many characters would you like your password to contain?")
-      while(answer < 8 || answer > 128){
+      let answer:number | any = prompt("How many characters would you like your password to contain?")
+      while(+answer < 8 || +answer > 128){
          answer=prompt("How many characters would you like your password to contain?")
-      if(answer< 8){
+      if(+answer< 8){
          alert("your password lenght must be more than 8 characters long")
       }
-      else if(answer>128){
+      else if(+answer>128){
          alert("your password lenght must be less than 128 characters")
       }
    }
@@ -30,7 +30,7 @@ function generator(){
       var upper=confirm("Must include a Uppercase letter")
  
    //empty variable to carry password
-      var inbox=document.getElementById('pass')
+      var inbox=document.getElementById('pass') as HTMLElement
       var res=""
       var counter=0
    //gets the password characters by using a while loop
@@ -56,7 +56,7 @@ function generator(){
 }
 //made afunction to copy texts
 function copyfun(){
-   var copy = document.getElementById("pass")
+   var copy = document.getElementById("pass") as HTMLElement
    copy.select();
    document.execCommand("copy")
    alert("Here's the text you copied" + copy.value)
