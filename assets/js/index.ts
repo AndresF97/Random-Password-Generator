@@ -1,16 +1,16 @@
+export {}
 
 // variables that carry characters
-var little=["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
-var big=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-var symbol=["!","@","$","%","^","&","*","(",")","[","]","{","}",";","<",">","/"]
-var nums=[0,1,2,3,4,5,6,7,8,9]
-const generatoPwdBtn = document.getElementById("button_1") as HTMLElement
-const copyClipBoardBtn = document.getElementById("button_2") as HTMLElement
+const littleLetter: Array<string> =["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"]
+const bigLetter:string[]=["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+const specialSymbol:string[]=["!","@","$","%","^","&","*","(",")","[","]","{","}",";","<",">","/"]
+const numsArr:number[]=[0,1,2,3,4,5,6,7,8,9]
+const generatoPwBtn = document.getElementById("btnOne") as HTMLElement
+const copyClipBoard = document.getElementById("btnTwo") as HTMLElement
 
 
 //if statements to carry code
-function generator(){
-
+function generatePwd(){
    //confirm the lenght of the password
       let answer:number | any = prompt("How many characters would you like your password to contain?")
       while(+answer < 8 || +answer > 128){
@@ -23,45 +23,45 @@ function generator(){
       }
    }
    // //alerts to to make sure the user wants these strings and numbers 
-      var length =confirm("Your password will be at least be "+answer+" characters long.")
-      var special=confirm("Must include special characters")
-      var numeric= confirm("Must include numbers")
-      var lower=confirm("Must include a lower case letter")
-      var upper=confirm("Must include a Uppercase letter")
+      let length =confirm("Your password will be at least be "+answer+" characters long.")
+      let special: boolean=confirm("Must include special characters")
+      let numeric: boolean= confirm("Must include numbers")
+      let lower:boolean=confirm("Must include a lower case letter")
+      let upper:boolean=confirm("Must include a Uppercase letter")
  
    //empty variable to carry password
-      var inbox=document.getElementById('pass') as HTMLElement
-      var res=""
-      var counter=0
+      const inbox=document.getElementById('pass') as HTMLElement
+      var mainArrayContainer:Array<any> = [];
+      var finalPwd:string = '';
+      var counter:number = 0;
    //gets the password characters by using a while loop
+   if (special) {
+         mainArrayContainer.push.apply(mainArrayContainer, specialSymbol);
+     }
+     if (numeric) {
+         mainArrayContainer.push.apply(mainArrayContainer, numsArr);
+     }
+     if (lower) {
+         mainArrayContainer.push.apply(mainArrayContainer, littleLetter);
+     }
+     if (upper) {
+         mainArrayContainer.push.apply(mainArrayContainer, bigLetter);
+     }
       while(counter < answer){
-      
-      if(special===true){
-         res+=symbol[Math.floor(Math.random() * symbol.length)]
-   }
-      else if(numeric===true){
-         res+=nums[Math.floor(Math.random() * nums.length)]
-   }
-      if(lower===true){
-       res+=little[Math.floor(Math.random() * little.length)]
+         finalPwd += mainArrayContainer[Math.floor(Math.random() * mainArrayContainer.length)];
+         counter += 1;
+      }
 
-   }
-      else if(upper===true){
-       res+=big[Math.floor(Math.random() * big.length)]
-   }
-      counter+=1
-}
-
-   inbox.textContent=res
+   inbox.textContent=finalPwd;
 }
 //made afunction to copy texts
-function copyfun(){
-   var copy = document.getElementById("pass") as HTMLElement
+function copyToClipBoard(){
+   var copy = document.getElementById("pass") as HTMLBodyElement | any
    copy.select();
    document.execCommand("copy")
    alert("Here's the text you copied" + copy.value)
 
 }
 //event listener that makes the newpassword
-generatoPwdBtn.addEventListener("click",generator)
-copyClipBoardBtn.addEventListener("click",copyfun)
+generatoPwBtn.addEventListener("click",generatePwd)
+copyClipBoard.addEventListener("click",copyToClipBoard)

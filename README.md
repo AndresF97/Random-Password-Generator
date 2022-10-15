@@ -23,22 +23,10 @@ In this website you can generate random passwords with the characters the user h
 <html>
 <body>
     <script>
-     //gets the password characters by using a while loop
-      while(counter < answer){
-      
-     if(special===true){
-         res+=symbol[Math.floor(Math.random() * symbol.length)]
-   }
-      else if(numeric===true){
-         res+=nums[Math.floor(Math.random() * nums.length)]
-   }
-      if(lower===true){
-       res+=little[Math.floor(Math.random() * little.length)]
-
-   }
-      else if(upper===true){
-       res+=big[Math.floor(Math.random() * big.length)]
-   }
+    while (counter < answer) {
+        finalPwd += mainArrayContainer[Math.floor(Math.random() * mainArrayContainer.length)];
+        counter += 1;
+    }
     </script>
 </body>
 </html>
@@ -46,5 +34,5 @@ In this website you can generate random passwords with the characters the user h
 ## Why this code is important
 - I choose this code because its the most important part of the program since it runs a loop until you get the password you have selected with the random characters you choose. It took a while to set this up but with time and pattience it finally worked.
 ## Author Links
-[LinkedIn](linkedin.com/in/andres-felipe-jimenez-ferreira-b67a35192)
-[GitHub](https://github.com/AndresF97)
+- [LinkedIn](linkedin.com/in/andres-felipe-jimenez-ferreira-b67a35192)
+- [GitHub](https://github.com/AndresF97)
